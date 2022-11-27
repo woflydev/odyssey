@@ -42,13 +42,13 @@ All of our members are a tight-knit, well-rounded community!<br>
  <br>
  
 ## Hardware Sector
-Seyed Mohammad Ermia Firouzabadi - Electrician<br>
-Lokajith Vellaru - Hardware Specialist<br>
+Ermia - Electrical Engineer<br>
+Lokajith - Hardware Specialist<br>
 Banjo Douglas Dillon-Hines - Hardware Specialist<br>
-Daniel T Laine - Media Management and Public Relations<br>
+Daniel - Media Management and Public Relations<br>
 
  <br>
  
 ## Software Sector
-Enoch Chen - Software Engineer<br>
-Ian Y Lai - Software Engineer
+Enoch - Software Engineer<br>
+Ian - Software Engineer
