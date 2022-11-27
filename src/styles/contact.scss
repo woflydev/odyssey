@@ -1,0 +1,91 @@
+form {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+input,
+textarea {
+  padding: 0.4rem;
+  background-color: var(--bg);
+  color: var(--primaryText);
+  border: 0;
+  border: 1px solid black;
+  border-radius: var(--radius);
+  font-weight: bold;
+  margin-bottom: 2vh;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 3pt var(--primaryText);
+}
+
+textarea {
+  resize: none;
+  width: 80%;
+}
+
+button[type="submit"] {
+  padding: 0.6rem;
+  background-color: var(--windowBg);
+  color: #777;
+  border-radius: 0px;
+  font-weight: bold;
+  margin-bottom: 2vh;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border: 2px solid #555;
+  transition: all 0.4s ease 0s;
+}
+
+button[type="submit"]:hover {
+  color: var(--linkText) !important;
+  background: var(--primaryText);
+  border-color: #048604 !important;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+button[type="submit"]:active {
+  position: relative;
+  top: 2px;
+}
+
+label {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input:focus {
+  border-radius: 0px;
+}
+
+.contactH1 {
+ padding-bottom: 2rem;
+ text-align: center;
+}
+
+@media screen and (min-width: 425px) {
+  .contactH1 {
+    text-align: left;
+  }
+}
+
+.contactContainer {
+  padding: 1rem;
+  display: flex 
+}
+
+@media screen and (min-width: 425px) {
+  .contactContainer {
+    padding: 2rem;
+  }
+}

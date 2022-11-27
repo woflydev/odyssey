@@ -1,0 +1,235 @@
+:root {
+  --primaryText: #ffc600;
+  --secondaryText: #ccc;
+  --linkText: #047be3;
+  --bg: #1b2d3a;
+  --windowBg: #193549;
+  --focusBg: hsl(205, 51%, 16%);
+  --borderColor: black;
+  --windowBackgroundImageColor: rgba(25,45,58,0.95);  
+  --blurRadius: 13px;
+}
+
+/* .light {
+  --primaryText: #be100e;
+  --secondaryText: #20111b;
+  --linkText: #047be3;
+  --bg: #b9b8ab;
+  --windowBg: #d5ccba;
+  --focusBg: #c7bbae;
+  --borderColor: #94897e;
+} */
+
+.light {
+  --primaryText: #268bd2;
+  --secondaryText: #586e75;
+  --linkText: #dc322f;
+  --bg: #eee8d5;
+  --windowBg: #fdf6e3;
+  --focusBg: #eee8d5;
+  --borderColor: #94897e;
+  --windowBackgroundImageColor: rgba(238,232,213,0.8); 
+  --blurRadius: 30px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: var(--bg);
+  color: var(--secondaryText);
+  font-size: 18px;
+  line-height: 1.6;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+header {
+  margin-left: 10vw;
+  margin-top: 3vh;
+  margin-right: 2vw;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+h1 {
+  color: var(--primaryText);
+  font-size: 50px;
+  letter-spacing: -2px;
+  transition: color 0.4s ease-in-out;
+}
+
+h2 {
+  padding-left: 4vw;
+  font-size: 1.2rem;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: var(--primaryText);
+  text-decoration: none;
+}
+
+p {
+  margin: 20px 0;
+}
+
+.container {
+  width: 100%;
+  min-height: 85%;
+  height: auto;
+  margin: 3vh auto auto auto;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+.mainContainer {
+  min-height: 100%;
+  width: auto;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-rows: auto;
+  max-width: 1280px;
+}
+
+.hidden {
+  display: none;
+}
+
+//Responsive font sizes
+@media (max-width: 1200px) {
+  legend {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+  h1,
+  .h1 {
+    font-size: calc(1.375rem + 1.3vw);
+  }
+  h2,
+  .h2 {
+    font-size: calc(1.325rem + 0.9vw);
+  }
+  h3,
+  .h3 {
+    font-size: calc(1.3rem + 0.6vw);
+  }
+  h4,
+  .h4 {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+  .display-1 {
+    font-size: calc(1.725rem + 5.7vw);
+  }
+  .display-2 {
+    font-size: calc(1.675rem + 5.1vw);
+  }
+  .display-3 {
+    font-size: calc(1.575rem + 3.9vw);
+  }
+  .display-4 {
+    font-size: calc(1.475rem + 2.7vw);
+  }
+  .close {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: calc(1.375rem + 0.5vw);
+  }
+
+  h3 {
+    font-size: calc(1rem + 0.6vw);
+  }
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: var(--bg);
+  color: var(--primaryText);
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  transition: background-color 0.4s ease-in-out;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -40px;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+footer {
+  padding-left: 3vw;
+  padding-bottom: 1vh;
+  margin-top: auto;
+  transition: background-color 0.4s ease-in-out;
+}
+
+footer > a {
+  transition: color 0.4s ease-in-out;
+}
+
+footer > a:hover {
+  color: var(--linkText);
+}
+
+//REACT TOGGLE
+
+.react-toggle-track-x {
+  bottom: 8px !important;
+  right: 12px !important;
+}
+
+.react-toggle-track-check {
+  bottom: 8px !important;
+  left: 6px !important;
+}
+
+.react-toggle-track {
+  color: var(--primaryText) !important;
+  background-color: var(--windowBg) !important;
+}
+
+.react-toggle--checked {
+  color: var(--primaryText) !important;
+}
+.react-toggle--checked .react-toggle-track {
+  background-color: var(--windowBg) !important;
+}

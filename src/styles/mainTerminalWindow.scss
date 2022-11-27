@@ -1,0 +1,88 @@
+:root {
+  --radius: 6px;
+}
+
+.LsDisplayTaskbar {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  background-color: var(--windowBg);
+  color: var(--secondaryText);
+  width: 100%;
+  padding: 3px;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  border-bottom: 1px solid var(--borderColor);
+  text-align: center;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.LsDisplayWindow:focus-within > .LsDisplayTaskbar {
+  background-color: var(--focusBg);
+  border-bottom: 1px solid var(--primaryText);
+  transition: background-color 0.4s ease-in-out;
+}
+
+.LsDisplayWindow {
+  border: 1px solid var(--borderColor);
+  background-color: var(--windowBg);
+  width: 95%;
+  margin: auto;
+  justify-content: flex-start;
+  min-height: 60vh;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding-bottom: 3vh;
+  border-radius: var(--radius);
+  transition: background-color 0.4s ease-in-out;
+  margin-bottom: 5vh;
+
+  h3 {
+    padding: 10px;
+    margin-bottom: 0px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    white-space: pre-wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .LsDisplayWindow {
+    width: 80%;
+  }
+  
+}
+
+
+
+.mappedItemsList {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-items {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.infoItem {
+  padding-left: 20px;
+}
+
+.miniProject {
+  order: 2;
+}
+
+.miniProjects {
+  order: 3;
+}
+
+li {
+  padding-block: 3px;
+}
+
+@media (max-width: 1024px) {
+  li {
+    padding-block: 6px;
+  }
+}

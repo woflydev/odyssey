@@ -1,0 +1,396 @@
+.wb-body {
+  background-color: var(--windowBg) !important;
+  border-bottom-right-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+  transition: background-color 0.4s ease-in-out;
+  
+}
+
+.winbox {
+  border-radius: var(--radius);
+  border: 1px solid var(--borderColor);
+  min-width: 650px;
+  min-height: 650px;
+}
+
+.wb-no-focus {
+  background-color: var(--windowBg) !important;
+  transition: background-color 0.4s ease-in-out;
+  .wb-title {
+    border-bottom: 1px solid var(--borderColor);
+  }
+
+  .wb-icon {
+    border-bottom: 1px solid var(--borderColor);
+  }
+}
+
+.wb-focus {
+  background-color: var(--focusBg) !important;
+  transition: background-color 0.4s ease-in-out;
+  .wb-title {
+    border-bottom: 1px solid var(--primaryText);
+  }
+
+  .wb-icon {
+    border-bottom: 1px solid var(--primaryText);
+  }
+}
+
+@media (max-width: 1000px) {
+  .winbox {
+    border-radius: 0px;
+  }
+
+  .wb-body {
+    border-radius: 0px;
+  }
+}
+
+
+
+.popupTerminaWindowContainer {
+  padding: 2rem;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+.popupTerminaWindowContainer::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: var(--windowBackgroundImageColor);
+  backdrop-filter: blur(var(--blurRadius));
+}
+
+@media only screen and (max-width: 600px) {
+  .popupTerminaWindowContainer {
+    padding: 1.5rem;
+  }
+}
+
+.popupTerminalWindowImageContainer {
+  display: grid;
+  max-height: 40vh;
+  grid-area: image;
+  place-items: center center;
+  place-self: center center;
+  position: relative;
+
+}
+
+
+
+.popupTerminaWindowImage {
+  width: auto;
+  max-height: 40vh;
+  max-width: 95%;
+  object-fit: contain !important;
+  margin: auto;
+  border-radius: var(--radius);
+}
+
+.popupTerminaWindowHeader {
+  position: relative;
+  padding-bottom: 0.8rem;
+  grid-area: header;
+}
+
+.popupTerminaWindowTextContainer {
+  position: relative;
+  grid-area: text;
+}
+
+.popupTerminalWindowFooter {
+  position: relative;
+  grid-area: footer;
+}
+
+.techItemsList {
+  display: inline-flex;
+  list-style: none;
+  flex-wrap: wrap;
+  padding-right: 1rem;
+}
+
+.techItemsList > li {
+  padding-inline: 0.5rem;
+}
+
+.popupTerminalWindowLinkIcons {
+  position: relative;
+  grid-area: linkIcons;
+  display: flex;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.popupTerminalWindowLinkIcon {
+  color: var(--primaryText);
+  transition: color 0.4s ease-in-out;
+}
+
+.popupTerminalWindowLinkIcon:hover {
+  color: var(--linkText);
+}
+
+.popupTerminalWindowLinkIcon:active {
+  position: relative;
+  top: 2px;
+}
+
+//Have to use this hack for computing color of svg icons
+//Needs to be adjusted separateley
+//https://codepen.io/sosuke/pen/Pjoqqp
+.svgIcon {
+  filter: invert(84%) sepia(0%) saturate(3021%) hue-rotate(176deg)
+    brightness(131%) contrast(60%);
+  width: 2rem;
+  transition: filter 0.4s ease-in-out;
+}
+
+.light {
+  .svgIcon {
+    filter: invert(64%) sepia(26%) saturate(147%) hue-rotate(138deg)
+      brightness(85%) contrast(88%);
+  }
+}
+
+.svgIcon:hover {
+  filter: invert(79%) sepia(59%) saturate(2824%) hue-rotate(360deg)
+    brightness(105%) contrast(104%);
+}
+
+.light {
+  .svgIcon:hover {
+    filter: invert(42%) sepia(82%) saturate(539%) hue-rotate(163deg)
+      brightness(95%) contrast(89%);
+  }
+}
+.popupWindowLinkButton {
+  align-items: normal;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgb(0, 0, 238);
+  border-style: none;
+  box-sizing: content-box;
+  color: var(--primaryText);
+  cursor: pointer;
+  display: inline;
+  font: inherit;
+  height: auto;
+  padding: 3px;
+  perspective-origin: 0 0;
+  text-align: start;
+  text-decoration: none;
+  transform-origin: 0 0;
+  width: auto;
+  -moz-appearance: none;
+  transition: color 0.4s ease-in-out;
+}
+
+.popupWindowLinkButton:active {
+  position: relative;
+  top: 2px;
+}
+
+.popupWindowLinkButton:hover {
+  color: var(--linkText);
+}
+
+/* Mozilla uses a pseudo-element to show focus on buttons, */
+/* but anchors are highlighted via the focus pseudo-class. */
+
+@supports (-moz-appearance: none) {
+  /* Mozilla-only */
+  .popupWindowLinkButton::-moz-focus-inner {
+    /* reset any predefined properties */
+    border: none;
+    padding: 0;
+  }
+  .popupWindowLinkButton:focus {
+    /* add outline to focus pseudo-class */
+    outline-style: dotted;
+    outline-width: 1px;
+  }
+}
+
+@media (max-width: 700px) {
+  .popupTerminaWindowContainer {
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "header header header header"
+      "image image image image"
+      "linkIcons linkIcons linkIcons linkIcons"
+      "text text text text";
+  }
+
+  .popupTerminaWindowImage {
+    width: 100%;
+  }
+
+  .popupTerminalWindowImageContainer > * {
+    width: 100%;
+  }
+
+  .popupTerminalWindowLinkIcons {
+    justify-content: center;
+    align-items: center;
+  }
+  .popupTerminalWindowLinkIcon {
+    margin-inline: 2vw;
+    transition: color 0.5s ease-in-out;
+  }
+}
+
+.wb-title {
+  font-family: inherit;
+  font-size: inherit;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: var(--secondaryText);
+}
+
+.wb-icon {
+  display: flex;
+  align-items: center;
+}
+
+.wb-header {
+  display: flex;
+  align-content: center;
+}
+
+.wb-min {
+  background: #00ca56;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #14ae46;
+  border-radius: 50%;
+  margin-inline: 0.3rem;
+  order: 3;
+  transition: filter 0.3s;
+}
+
+.wb-max {
+  background: #ffbd4c;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #e09e3e;
+  border-radius: 50%;
+  margin-inline: 0.3rem;
+  order: 2;
+  transition: filter 0.3s;
+}
+
+.wb-close {
+  background: #ff5c5c;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #e33e41;
+  border-radius: 50%;
+  margin-inline: 0.3rem;
+  margin-left: 10px;
+  order: 1;
+  transition: filter 0.3s;
+}
+
+.wb-close:hover {
+  filter: brightness(70%);
+  content: "dupa"
+}
+
+.wb-close:hover::before {
+  color: white;
+  content: "x";
+  font-size: 12px;
+  font-weight: 900;
+  position: absolute;
+  top: 45%;
+  left: 46.5%;
+  transform: translate(-50%, -50%);
+}
+
+.wb-min:hover {
+  filter: brightness(70%);
+}
+
+.wb-min:hover::before {
+  color: white;
+  content: "-";
+  font-size: 13px;
+  font-weight: 900;
+  position: absolute;
+  top: 45.8%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.wb-max:hover {
+  filter: brightness(70%);
+}
+
+.wb-max:hover::before {
+  color: white;
+  content: "+";
+  font-size: 12px;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wb-full {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .wb-min {
+    width: 20px;
+    height: 20px;
+  }
+
+  .wb-max {
+    width: 20px;
+    height: 20px;
+  }
+
+  .wb-close {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.wb-body::-webkit-scrollbar {
+  width: 12px;
+}
+.wb-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+.wb-focus {
+  .wb-body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--primaryText);
+  }
+}
+.wb-no-focus {
+  .wb-body::-webkit-scrollbar-thumb {
+    background: var(--bg);
+  }
+}
+
+.wb-body::-webkit-scrollbar-corner {
+  background: transparent;
+}
