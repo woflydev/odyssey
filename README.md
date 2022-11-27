@@ -1,2 +1,2 @@
-# project_odyssey
+# Project Odyssey
 Official Website for the Project Odyssey team.
