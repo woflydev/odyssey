@@ -200,7 +200,7 @@ export default function ItemsList() {
         style={{ cursor: "pointer" }}
         onClick={() => {
           const win = new WinBox({
-            title: "Contact me",
+            title: "Contact Us",
             width: checkScreenWidth(),
             height: checkScreenWidth(),
             x: "center",
