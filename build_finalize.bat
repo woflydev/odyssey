@@ -73,7 +73,7 @@ set /p commitmsg=Commit Message/Name:
 
 git init
 git add .
-git commit -m "[UPDATER] =>> %commitmsg%"
+git commit -m "[UPDATER] => %commitmsg%"
 git push origin main
 
 echo Script run complete.

@@ -37,7 +37,7 @@ techIcons: [
 We are a passionate robotics team based in Brisbane, Australia 🇦🇺.<br>
 Dedicated individuals from a multicultural and diverse background.<br>
 Our team includes members from the Queensland Academies for Science, Mathematics, and Technology.<br>
-All of our members are a tight-knit, well-rounded community!<br>
+All of our members are a tight-knit, well-rounded community, eager to learn and thrive!<br>
 
  <br>
  
