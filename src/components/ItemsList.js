@@ -21,7 +21,9 @@ export default function ItemsList() {
               nameOfClass
               popupGithubLink
               popupImageAlt
+              popupImageAlt2
               popupImageSrc
+              popupImageSrc2
               popupLiveLink
               techIcons
               title
@@ -48,7 +50,9 @@ export default function ItemsList() {
               nameOfClass
               popupGithubLink
               popupImageAlt
+              popupImageAlt2
               popupImageSrc
+              popupImageSrc2
               popupLiveLink
               techIcons
               title
@@ -71,7 +75,9 @@ export default function ItemsList() {
               nameOfClass
               popupGithubLink
               popupImageAlt
+              popupImageAlt2
               popupImageSrc
+              popupImageSrc2
               popupLiveLink
               techIcons
               title
@@ -115,7 +121,9 @@ export default function ItemsList() {
       React.createElement(PopupTerminalWindow, {
         title: item.node.frontmatter.title,
         popupImageSrc: item.node.frontmatter.popupImageSrc,
+        popupImageSrc2: item.node.frontmatter.popupImageSrc2,
         popupImageAlt: item.node.frontmatter.popupImageAlt,
+        popupImageAlt2: item.node.frontmatter.popupImageAlt2,
         video: item.node.frontmatter.video,
         popupGithubLink: item.node.frontmatter.popupGithubLink,
         popupLiveLink: item.node.frontmatter.popupLiveLink,

@@ -4,7 +4,9 @@ video: "false"
 listName: "👨‍💻 /About Us"
 title: "Who Are We?"
 popupImageSrc: "odyssey.jpg"
+popupImageSrc2: ""
 popupImageAlt: "the project odyssey logo"
+popupImageAlt2: "alt"
 popupGithubLink: "https://github.com/woflydev/"
 techIcons: [
         "javascript",

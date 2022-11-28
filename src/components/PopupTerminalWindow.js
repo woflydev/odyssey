@@ -7,9 +7,11 @@ import { faLink } from "@fortawesome/free-solid-svg-icons"
 export default function PopupTerminalWindow({
   title,
   popupImageAlt,
+  popupImageAlt2,
   popupText,
   video,
   popupImageSrc,
+  popupImageSrc2,
   popupGithubLink,
   popupLiveLink,
   techIcons,
@@ -104,23 +106,23 @@ export default function PopupTerminalWindow({
               <a href={link} target="_blank" rel="noopener noreferrer">
                 <img
                   src={`${
-                    /^https/.test(popupImageSrc)
-                      ? popupImageSrc
-                      : "/" + popupImageSrc
+                    /^https/.test(popupImageSrc2)
+                      ? popupImageSrc2
+                      : "/" + popupImageSrc2
                   }`}
                   className="popupTerminaWindowImage"
-                  alt={popupImageAlt}
+                  alt={popupImageAlt2}
                 ></img>
               </a>
             ) : (
               <img
                 src={`${
-                  /^https/.test(popupImageSrc)
-                    ? popupImageSrc
-                    : "/" + popupImageSrc
+                  /^https/.test(popupImageSrc2)
+                    ? popupImageSrc2
+                    : "/" + popupImageSrc2
                 }`}
                 className="popupTerminaWindowImage"
-                alt={popupImageAlt}
+                alt={popupImageAlt2}
               ></img>
 							
             )}

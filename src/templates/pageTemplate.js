@@ -17,7 +17,9 @@ export default function Template({
           title={frontmatter.title}
           video={frontmatter.video}
           popupImageSrc={frontmatter.popupImageSrc}
+          popupImageSrc2={frontmatter.popupImageSrc2}
           popupImageAlt={frontmatter.popupImageAlt}
+          popupImageAlt2={frontmatter.popupImageAlt2}
           popupGithubLink={frontmatter.popupGithubLink}
           popupLiveLink={frontmatter.popupLiveLink}
           techIcons={frontmatter.techIcons}
