@@ -69,7 +69,6 @@ goto push
 
 :: end of the program, exit.
 :push
-
 set /p commitmsg=Commit Message/Name: 
 
 git init
