@@ -20,13 +20,13 @@ ECHO.
 
 goto start
 
+:: deletes old public folder
+rd /s /q "public"
+
 :: option 1
 :option1
 echo Starting build...
 timeout /t 1 /nobreak
-
-:: deletes old public folder
-rd /s /q "public"
 
 :: generates new site
 yarn run build
@@ -34,9 +34,6 @@ yarn run build
 :option2
 echo Starting build...
 timeout /t 1 /nobreak
-
-:: deletes old public folder
-rd /s /q "public"
 
 :: generates new site
 yarn run build
