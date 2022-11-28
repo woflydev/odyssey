@@ -2,14 +2,13 @@
 
 call buildconfig.cmd
 
-echo Starting build...
+echo [SYSTEM] STARTING BUILD...
 timeout /t 1 /nobreak
 
 :: deletes old public folder
 rd /s /q "public"
 
-echo old site cache removed.
-timeout /t 2 /nobreak
+echo [SYSTEM] OLD SITE CACHE REMOVED.
 
 :: generates new site
 yarn run build
