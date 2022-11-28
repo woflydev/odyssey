@@ -28,8 +28,11 @@ goto getpath
 :: start of options
 :option1
 echo You selected %choice%.
-cd %OPTION_1%
-del /s *
+::cd %OPTION_1%
+::del /s *
+
+FOR /d %%a IN ("%OPTION_1%\*") DO IF /i NOT "%%~nxa"=="%keepdir%" RD /S /Q "%%a"
+FOR %%a IN ("%OPTION_1%\*") DO IF /i NOT "%%~nxa"=="%keepfile%" DEL "%%a"
 
 echo HOME DIR NAVIGATION
 timeout /t 3 /nobreak
@@ -44,8 +47,11 @@ goto end
 :: option number 2
 :option2
 echo You selected %choice%.
-cd %OPTION_2%
-del *.*
+::cd %OPTION_2%
+::del /s *
+
+FOR /d %%a IN ("%OPTION_2%\*") DO IF /i NOT "%%~nxa"=="%keepdir%" RD /S /Q "%%a"
+FOR %%a IN ("%OPTION_2%\*") DO IF /i NOT "%%~nxa"=="%keepfile%" DEL "%%a"
 
 echo HOME DIR NAVIGATION
 timeout /t 3 /nobreak
@@ -55,6 +61,7 @@ cd "%HOME_DIR%\public"
 move /y * %OPTION_2%
 
 goto end
+
 
 :: end of the program, exit.
 :end
