@@ -77,4 +77,3 @@ git commit -m "[UPDATER] => %commitmsg%"
 git push origin main
 
 echo Script run complete.
-timeout /t 2 /nobreak
