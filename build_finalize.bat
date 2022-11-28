@@ -1,10 +1,9 @@
 @echo off
 setlocal
 
-call buildconfig.cmd
+echo [SYSTEM] LOADING CONFIG PARAMETERS...
 
-echo [SYSTEM] HEIRARCHY CLEANUP AND WEBSITE PUSH...
-timeout /t 1 /nobreak
+call buildconfig.cmd
 
 ::-----------------------------------------------------------------------------------::
 
@@ -39,16 +38,18 @@ goto getpath
 ::-----------------------------------------------------------------------------------::
 
 :execute
+:: ensures that the specified folder is linked to github and contains the validation directory
+echo. && echo [SYSTEM] ATTEMPTING FOLDER VALIDATION AT %~1\%foldervalidationdir%...
 
-echo %~1\.git
-::timeout /t 800 /nobreak
-
-if exist %~1\.git\ (
-	echo Directory Exists!
+if exist %~1\%foldervalidationdir% (
+	echo. && echo [SYSTEM] DIRECTORY FOUND AND VALIDATED!
+	timeout /t 3 /nobreak
+	echo.
 ) else (
-	echo. && echo An error was found. Most likely the path specified does not exist! && goto getpath
+	echo. && echo [SYSTEM] AN ERROR WAS FOUND. MOST LIKELY THE FILE PATH DOES NOT EXIST! && goto getpath
 )
 
+:: performs copy
 FOR /d %%a IN ("%~1\*") DO IF /i NOT "%%~nxa"=="%keepdir%" RD /S /Q "%%a"
 FOR %%a IN ("%~1\*") DO IF /i NOT "%%~nxa"=="%keepfile%" DEL "%%a"
 

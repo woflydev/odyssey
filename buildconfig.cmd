@@ -7,6 +7,8 @@ set OPTION_4=
 set OPTION_5=
 set OPTION_6=
 
+set "foldervalidationdir=.git\config"
+
 set "keepdir=.git"
 set "keepfile=keepfile.file"
 
