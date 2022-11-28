@@ -51,4 +51,8 @@ Daniel - Media Management and Public Relations<br>
  
 ## Software Sector
 Enoch - Software Engineer<br>
-Ian - Software Engineer
+Ian - Software Engineer<br>
+
+ <br>
+
+These are the different services, frameworks, and tools we use! ↓↓↓

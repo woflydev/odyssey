@@ -34,13 +34,14 @@ export default function Contact({ close }) {
 					options={{
                 deleteSpeed: "natural",
 								cursor: "_",
+								delay: "60"
               }}
             onInit={typewriter => {
               typewriter
                 .typeString("Contact Us!")
                 .start()
                 .callFunction(function (state) {
-                  state.elements.cursor.style.display = "none"
+                  state.elements.cursor.style.display = "_"
                 })
             }}
           />

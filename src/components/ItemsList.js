@@ -86,6 +86,7 @@ export default function ItemsList() {
       }
     }
   `)
+	
   const checkScreenWidth = () => {
     return window.screen.width > 1000 ? "75%" : "100%"
   }
@@ -170,14 +171,14 @@ export default function ItemsList() {
           width: "70%",
         }}
       >
-        {`lrwxr-xr-x 1 kielx admin ${item.node.frontmatter.added} ${item.node.frontmatter.slug} -> `}
+        {`lrwxr-xr-x 1 woflydev admin ${item.node.frontmatter.added} ${item.node.frontmatter.slug} -> `}
         <a href={item.node.frontmatter.popupGithubLink}>
           {item.node.frontmatter.popupGithubLink}
         </a>
       </span>
     </li>
   ))
-
+	
   const projectsMobile = data.projects.edges.map(item => (
     <li
       key={item.node.frontmatter.title}
@@ -233,10 +234,17 @@ export default function ItemsList() {
 
   const mappedItems = () => {
     return (
-      <>
+      /*<>
         <li>→ Info:</li> {info} {contactItem} <li>→ Projects:</li>
         {projects} <li className="miniProject">→ Mini-Projects:</li>
+      </>*/
+
+			<>
+        <li>→ Info:</li> {info} {contactItem} 
+				<li>→ Our Current Projects:</li> {projects} 
+				<li className="pastproject">→ Our Past Projects:</li>
       </>
+			
     )
   }
 
@@ -256,8 +264,8 @@ export default function ItemsList() {
             /Contact
           </Link>
         </li>{" "}
-        <li>→ Projects:</li>
-        {projectsMobile} <li className="miniProject">→ Mini-Projects:</li>
+        <li>→ Our Ongoing Projects:</li> {projectsMobile}
+				<li className="pastproject">→ Our Past Projects:</li>
       </>
     )
   }

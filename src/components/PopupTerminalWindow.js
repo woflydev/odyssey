@@ -24,7 +24,7 @@ export default function PopupTerminalWindow({
       <img
         className="svgIcon"
         src={`https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/${icon}.svg`}
-        alt="Tech icon"
+        alt="Tech Icon"
       />
     </li>
   ))
@@ -40,18 +40,20 @@ export default function PopupTerminalWindow({
 					options={{
                 deleteSpeed: "natural",
 								cursor: "_",
+								delay: "60"
               }}
             onInit={typewriter => {
               typewriter
                 .typeString(`${title}`)
                 .start()
                 .callFunction(function (state) {
-                  state.elements.cursor.style.display = "none"
+                  state.elements.cursor.style.display = "_"
                 })
             }}
           />
         </h1>
-        {video === "false" ? (
+				
+				{video === "false" ? ( // first image
           <div className="popupTerminalWindowImageContainer">
             {(link = popupLiveLink || popupGithubLink) ? ( // eslint-disable-line no-cond-assign
               <a href={link} target="_blank" rel="noopener noreferrer">
@@ -75,6 +77,52 @@ export default function PopupTerminalWindow({
                 className="popupTerminaWindowImage"
                 alt={popupImageAlt}
               ></img>
+							
+            )}
+          </div>
+        ) : (
+          <div className="popupTerminalWindowImageContainer">
+            <video
+              height="100%"
+              width="100%"
+              controls
+              autoplay
+              muted
+              loop
+              playsinline
+              className="popupTerminaWindowImage"
+            >
+              <source src={video} type="video/mp4" />
+              get a better browser lol, yours doesn't support embedded video.
+            </video>
+          </div>
+        )}
+				
+				{video === "false" ? ( // second image
+          <div className="popupTerminalWindowImageContainer2">
+            {(link = popupLiveLink || popupGithubLink) ? ( // eslint-disable-line no-cond-assign
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={`${
+                    /^https/.test(popupImageSrc)
+                      ? popupImageSrc
+                      : "/" + popupImageSrc
+                  }`}
+                  className="popupTerminaWindowImage"
+                  alt={popupImageAlt}
+                ></img>
+              </a>
+            ) : (
+              <img
+                src={`${
+                  /^https/.test(popupImageSrc)
+                    ? popupImageSrc
+                    : "/" + popupImageSrc
+                }`}
+                className="popupTerminaWindowImage"
+                alt={popupImageAlt}
+              ></img>
+							
             )}
           </div>
         ) : (
@@ -137,7 +185,7 @@ export default function PopupTerminalWindow({
             <>
               <div className="break"></div>
               <div className="popupTerminalWindowFooter">
-                <h4>Tech used:</h4>
+                <h4>Tech Used:</h4>
                 <ul className="techItemsList">{techIcons}</ul>
               </div>
             </>

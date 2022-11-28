@@ -88,6 +88,15 @@
 
 }
 
+.popupTerminalWindowImageContainer2 {
+  display: grid;
+  max-height: 40vh;
+  grid-area: image;
+  place-items: center center;
+  place-self: center center;
+  position: relative;
+	margin-top: 180px;
+}
 
 
 .popupTerminaWindowImage {
