@@ -39,9 +39,11 @@ timeout /t 3 /nobreak
 cd "%HOME_DIR%\public"
 
 :: moves the file to branch
-move /y * %OPTION_1%
+xcopy /s * %OPTION_1%
 
-goto end
+cd %OPTION_1%
+
+goto push
 
 
 :: option number 2
@@ -58,12 +60,22 @@ timeout /t 3 /nobreak
 cd "%HOME_DIR%\public"
 
 :: moves the file to branch
-move /y * %OPTION_2%
+xcopy /s * %OPTION_2%
 
-goto end
+cd %OPTION_2%
+
+goto push
 
 
 :: end of the program, exit.
-:end
+:push
+
+set /p commitmsg=Commit Message/Name: 
+
+git init
+git add .
+git commit -m "%commitmsg%"
+git push origin main
+
 echo Script run complete.
 timeout /t 2 /nobreak
