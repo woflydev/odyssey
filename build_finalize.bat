@@ -40,6 +40,8 @@ move /y * %OPTION_1%
 
 goto end
 
+
+:: option number 2
 :option2
 echo You selected %choice%.
 cd %OPTION_2%
