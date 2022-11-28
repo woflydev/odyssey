@@ -27,7 +27,9 @@ const Header = ({ siteTitle }) => {
               options={{
                 deleteSpeed: "natural",
 								cursor: "_",
+                delay: "60"
               }}
+              
               onInit={typewriter => {
                 typewriter
                   .typeString("that's a feature, i swear!")
