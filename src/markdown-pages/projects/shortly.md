@@ -7,7 +7,7 @@ video: "false"
 listName: "🔗 /lorem ipsum"
 popupImageSrc: "Shortly.webp"
 popupImageAlt: "lorem ipsum"
-popupLiveLink: "https://diskreet.org/"
+popupLiveLink: "https://o.diskreet.org/"
 popupGithubLink: "https://github.com/woflydev/"
 techIcons: [
         "react",
