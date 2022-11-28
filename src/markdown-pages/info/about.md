@@ -3,7 +3,7 @@ slug: "/about"
 video: "false"
 listName: "👨‍💻 /About Us"
 title: "Who Are We?"
-popupImageSrc: "odyssey.jfif"
+popupImageSrc: "odyssey.jpg"
 popupImageAlt: "the project odyssey logo"
 popupGithubLink: "https://github.com/woflydev/"
 techIcons: [
