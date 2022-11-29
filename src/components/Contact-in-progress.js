@@ -1,14 +1,33 @@
 import React from "react"
 import Typewriter from "typewriter-effect"
 import { navigate } from "gatsby-link"
+import { useState } from "react";
 import "../styles/contact.scss"
 
 export default function Contact({ close }) {
+  const [mailerState, setMailerState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  function handleStateChange(e) {
+    setMailerState((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  }
+ 
+
+
+
+
   const [state, setState] = React.useState({})
 
-  const handleChange = e => {
+  // old handle change
+  /*const handleChange = e => {
     setState({ ...state, [e.target.name]: e.target.value })
-  }
+  }*/
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -20,22 +39,28 @@ export default function Contact({ close }) {
       .then(response =>
         response.status === 200
           ? navigate("/success")
-          : alert("An error occured while trying to send contact message!")
+          : alert("An error occured while trying to send contact message. This is most likely due to an error on our end. Please try again later, we apologize for the inconvenience!")
       )
       .then(close)
   }
 
   return (
     <div className="contactContainer">
-      <div style={{ margin: "auto", minWidth: "100%" }}>
+      <div 
+			style={{ margin: "auto", minWidth: "100%" }}>
         <h1 className="contactH1">
-          <Typewriter
+          <Typewriter 
+					options={{
+                deleteSpeed: "natural",
+								cursor: "_",
+								delay: "60"
+              }}
             onInit={typewriter => {
               typewriter
-                .typeString("Contact me")
+                .typeString("Contact Us!")
                 .start()
                 .callFunction(function (state) {
-                  state.elements.cursor.style.display = "none"
+                  state.elements.cursor.style.display = "_"
                 })
             }}
           />
@@ -60,7 +85,8 @@ export default function Contact({ close }) {
             name="name"
             required={true}
             placeholder="Name"
-            onChange={handleChange}
+            onChange={handleStateChange}
+            //onChange={handleChange}
           />
           <label htmlFor="email">Your Email</label>
           <input
@@ -68,7 +94,7 @@ export default function Contact({ close }) {
             id="email"
             name="email"
             required={true}
-            placeholder="E-Mail adress"
+            placeholder="E-Mail address"
             onChange={handleChange}
           />
           <label htmlFor="message">Message</label>

@@ -211,6 +211,34 @@ git add .
 git commit -m "[UPDATER] => %commitmsg%"
 git push origin main
 
+goto firebase
+
+::-----------------------------------------------------------------------------------::
+
+:firebase
+
+set deploy=
+set /p deploy=[SYSTEM] DEPLOY TO FIREBASE?  
+
+if not '%deploy%'=='' set choice=%choice:~0,1%
+if '%deploy%'=='y' goto :firebasedeploy
+if '%deploy%'=='Y' goto :firebasedeploy
+if '%deploy%'=='yes' goto :firebasedeploy
+
+goto end
+
+:firebasedeploy
+
+cd %HOME_DIR%
+
+firebasedeploy.bat
+
+goto end
+
+
+:end
+
+echo.
 echo Script run complete.
 
 exit
