@@ -37,8 +37,9 @@ export default function PopupTerminalWindow({
         className="popupTerminaWindowContainer"
         style={{ backgroundImage: `url(${popupImageSrc})` }}
       >
+      <div>
         <h1 className="popupTerminaWindowHeader">
-          <Typewriter 
+          <Typewriter
 					options={{
                 deleteSpeed: "natural",
 								cursor: "_",
@@ -99,51 +100,57 @@ export default function PopupTerminalWindow({
             </video>
           </div>
         )}
-				
-				{video === "false" ? ( // second image
-          <div className="popupTerminalWindowImageContainer2">
-            {(link = popupLiveLink || popupGithubLink) ? ( // eslint-disable-line no-cond-assign
-              <a href={link} target="_blank" rel="noopener noreferrer">
+
+        {popupImageSrc2 === "" || popupImageSrc2 === null ? ( // second image, this first checks if it is needed (if not included in the markdown, it will be empty, null, or undefined.)
+          <h2>no image detected</h2>
+        ) : (
+          video === "false" ? (
+            <div className="popupTerminalWindowImageContainer">
+              {(link = popupLiveLink || popupGithubLink) ? ( // eslint-disable-line no-cond-assign
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={`${
+                      /^https/.test(popupImageSrc)
+                        ? popupImageSrc
+                        : "/" + popupImageSrc
+                    }`}
+                    className="popupTerminaWindowImage"
+                    alt={popupImageAlt}
+                  ></img>
+                </a>
+              ) : (
                 <img
                   src={`${
-                    /^https/.test(popupImageSrc2)
-                      ? popupImageSrc2
-                      : "/" + popupImageSrc2
+                    /^https/.test(popupImageSrc)
+                      ? popupImageSrc
+                      : "/" + popupImageSrc
                   }`}
                   className="popupTerminaWindowImage"
-                  alt={popupImageAlt2}
+                  alt={popupImageAlt}
                 ></img>
-              </a>
-            ) : (
-              <img
-                src={`${
-                  /^https/.test(popupImageSrc2)
-                    ? popupImageSrc2
-                    : "/" + popupImageSrc2
-                }`}
-                className="popupTerminaWindowImage"
-                alt={popupImageAlt2}
-              ></img>
 							
-            )}
-          </div>
-        ) : (
-          <div className="popupTerminalWindowImageContainer">
-            <video
-              height="100%"
-              width="100%"
-              controls
-              autoplay
-              muted
-              loop
-              playsinline
-              className="popupTerminaWindowImage"
-            >
-              <source src={video} type="video/mp4" />
-              get a better browser lol, yours doesn't support embedded video.
-            </video>
-          </div>
+              )}
+            </div>
+          ) : (
+            <div className="popupTerminalWindowImageContainer">
+              <video
+                height="100%"
+                width="100%"
+                controls
+                autoplay
+                muted
+                loop
+                playsinline
+                className="popupTerminaWindowImage"
+              >
+                <source src={video} type="video/mp4" />
+                get a better browser lol, yours doesn't support embedded video.
+              </video>
+            </div>
+          )
         )}
+
+      </div>
 
         {popupGithubLink || popupLiveLink ? (
           <div className="popupTerminalWindowLinkIcons">

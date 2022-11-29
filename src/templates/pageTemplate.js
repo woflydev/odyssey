@@ -39,7 +39,9 @@ export const pageQuery = graphql`
         nameOfClass
         popupGithubLink
         popupImageAlt
+        popupImageAlt2
         popupImageSrc
+        popupImageSrc2
         popupLiveLink
         techIcons
         title
