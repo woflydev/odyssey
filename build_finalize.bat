@@ -217,27 +217,18 @@ goto firebase
 
 :firebase
 
+cd %HOME_DIR%
+
 set deploy=
 set /p deploy=[SYSTEM] DEPLOY TO FIREBASE?  
 
 if not '%deploy%'=='' set choice=%choice:~0,1%
-if '%deploy%'=='y' goto :firebasedeploy
-if '%deploy%'=='Y' goto :firebasedeploy
-if '%deploy%'=='yes' goto :firebasedeploy
-
-goto end
-
-:firebasedeploy
-
-cd %HOME_DIR%
-
-firebasedeploy.bat
-
-goto end
+if '%deploy%'=='y' firebase deploy && goto end
+if '%deploy%'=='Y' firebase deploy && goto end
+if '%deploy%'=='yes' firebase deploy && goto end
 
 
 :end
-
 echo.
 echo Script run complete.
 
