@@ -219,6 +219,8 @@ goto firebase
 
 cd %HOME_DIR%
 
+echo.
+
 set deploy=
 set /p deploy=[SYSTEM] DEPLOY TO FIREBASE?  
 

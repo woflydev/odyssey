@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Project Odyssey's Official Website`,
     titleTemplate: `%s | Odyssey's Official Website`,
-    description: `Terminal -command-line themed portfolio featuring projects ranging from robust Gatsby PWA's, React APPs and FullStack Web APPs utilizing cloud platforms to simple HTML, CSS and JavaScript sites.`,
+    description: `Project Odyssey's Official Website.`,
     author: `woflydev@project_odyssey`,
     url: "https://odyssey.diskreet.org",
     image: "/odyssey.jpg", // Path to your image you placed in the 'static' folder
