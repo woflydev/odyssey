@@ -10,6 +10,8 @@ const DarkModeToggle = () => {
       : false
   )
 
+  console.log(setIsLoaded);
+
   const [lightMode, setLightMode] = useState(
     typeof window !== "undefined"
       ? JSON.parse(localStorage.getItem("lightMode")) || false

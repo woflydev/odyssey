@@ -32,7 +32,7 @@ export default function Contact({ close }) {
           <Typewriter
             onInit={typewriter => {
               typewriter
-                .typeString("Contact me")
+                .typeString("Contact Us!")
                 .start()
                 .callFunction(function (state) {
                   state.elements.cursor.style.display = "none"
