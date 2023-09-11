@@ -5,7 +5,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import WinBox from "winbox/src/js/winbox"
 import "winbox/dist/css/winbox.min.css"
 
-import Contact from "./Contact"
+//import Contact from "./Contact"
 import PopupTerminalWindow from "../components/PopupTerminalWindow"
 
 export default function ItemsList() {
@@ -202,7 +202,7 @@ export default function ItemsList() {
     </li>
   ))
 
-  const contactItem = (
+  /*const contactItem = (
     <li className="infoItem">
       <button
         className="popupWindowLinkButton"
@@ -238,8 +238,7 @@ export default function ItemsList() {
         /Contact
       </button>
     </li>
-  )
-
+  )*/
   const mappedItems = () => {
     return (
       /*<>
@@ -248,7 +247,7 @@ export default function ItemsList() {
       </>*/
 
 			<>
-        <li>→ Info:</li> {info} {contactItem} 
+        <li>→ Info:</li> {info}
 				<li>→ Our Current Projects:</li> {projects} 
 				<li className="pastproject">→ Our Past Projects:</li>
       </>

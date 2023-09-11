@@ -2,7 +2,7 @@ import React from "react"
 import ReactDOM from "react-dom"
 //importing winbox https://github.com/nextapps-de/winbox/issues/1
 import WinBox from "winbox/src/js/winbox"
-import Contact from "./Contact"
+import Contact from "./old_Contact"
 import { Link } from "gatsby"
 
 const checkScreenWidthMobile = () => {

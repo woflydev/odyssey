@@ -1,7 +1,7 @@
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Contact from "../components/Contact"
+import Contact from "../components/old_Contact"
 
 const NotFoundPage = () => (
   <Layout>
