@@ -35,7 +35,7 @@ export default function PopupTerminalWindow({
     <>
       <div
         className="popupTerminaWindowContainer"
-        style={{ backgroundImage: `url(${popupImageSrc})` }}
+        //style={{ backgroundImage: `url(${popupImageSrc})` }}
       >
       <div>
         <h1 className="popupTerminaWindowHeader">
@@ -96,7 +96,7 @@ export default function PopupTerminalWindow({
               className="popupTerminaWindowImage"
             >
               <source src={video} type="video/mp4" />
-              get a better browser lol, yours doesn't support embedded video.
+              you must be using a browser straight outta 2001! yours doesn't support embedded video.
             </video>
           </div>
         )}
@@ -144,7 +144,7 @@ export default function PopupTerminalWindow({
                 className="popupTerminaWindowImage"
               >
                 <source src={video} type="video/mp4" />
-                get a better browser lol, yours doesn't support embedded video.
+                you must be using a browser straight outta 2001! yours doesn't support embedded video.
               </video>
             </div>
           )

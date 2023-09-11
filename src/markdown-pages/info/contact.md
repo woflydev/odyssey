@@ -1,5 +1,5 @@
 ---
-slug: "/contact"
+slug: "/contact-odyssey"
 video: "false"
 listName: "📧 /Contact"
 title: "Contact Us!"

@@ -1,8 +1,8 @@
 import React from "react"
-import ReactDOM from "react-dom"
+//import ReactDOM from "react-dom"
 //importing winbox https://github.com/nextapps-de/winbox/issues/1
-import WinBox from "winbox/src/js/winbox"
-import Contact from "./old_Contact"
+//import WinBox from "winbox/src/js/winbox"
+//import Contact from "./old_Contact"
 import { Link } from "gatsby"
 
 const checkScreenWidthMobile = () => {
@@ -12,7 +12,13 @@ const checkScreenWidthMobile = () => {
 }
 
 const desktopButton = (
-  <button
+
+  <a
+    href="mailto:contact@woflydev.com?subject=Hi%20Project%20Odyssey!&body=We're%20reaching%20out%20because...%20%3C._.%3E"
+    target="_blank"
+    rel="noopener noreferrer"
+  >Contact</a>
+  /*<button
     className="popupWindowLinkButton"
     style={{ cursor: "pointer" }}
     onClick={() => {
@@ -41,7 +47,7 @@ const desktopButton = (
     }}
   >
     Contact
-  </button>
+  </button>*/
 )
 
 const Footer = () => {
@@ -52,7 +58,11 @@ const Footer = () => {
       <div style={{ margin: "auto" }}>
         <Link to="/">Home</Link> {" | "}
         {checkScreenWidthMobile() ? (
-          <Link to="/contact">Contact</Link>
+          <a
+          href="mailto:contact@woflydev.com?subject=Hi%20Project%20Odyssey!&body=We're%20reaching%20out%20because...%20%3C._.%3E"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Contact</a>
         ) : (
           desktopButton
         )}
