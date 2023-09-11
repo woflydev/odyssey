@@ -14,7 +14,7 @@ const checkScreenWidthMobile = () => {
 const desktopButton = (
 
   <a
-    href="mailto:contact@woflydev.com?subject=Hi%20Project%20Odyssey!&body=We're%20reaching%20out%20because...%20%3C._.%3E"
+    href="mailto:odyssey@woflydev.com?subject=Hi%20Project%20Odyssey!&body=We're%20reaching%20out%20because...%20%3C._.%3E"
     target="_blank"
     rel="noopener noreferrer"
   >Contact</a>
@@ -59,7 +59,7 @@ const Footer = () => {
         <Link to="/">Home</Link> {" | "}
         {checkScreenWidthMobile() ? (
           <a
-          href="mailto:contact@woflydev.com?subject=Hi%20Project%20Odyssey!&body=We're%20reaching%20out%20because...%20%3C._.%3E"
+          href="mailto:odyssey@woflydev.com?subject=Hi%20Project%20Odyssey!&body=We're%20reaching%20out%20because...%20%3C._.%3E"
           target="_blank"
           rel="noopener noreferrer"
         >Contact</a>

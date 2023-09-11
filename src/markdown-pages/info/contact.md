@@ -12,7 +12,7 @@ popupGithubLink: "https://github.com/woflydev/"
 
 <center>
 
-## If you have any questions or would like to get in touch, don't hesitate to shoot us an email at [odyssey@woflydev.com](mailto:contact@woflydev.com?subject=Hi%20Project%20Odyssey!&body=We're%20reaching%20out%20because...%20%3C._.%3E)
+## If you have any questions or would like to get in touch, don't hesitate to shoot us an email at [odyssey@woflydev.com](mailto:odyssey@woflydev.com?subject=Hi%20Project%20Odyssey!&body=We're%20reaching%20out%20because...%20%3C._.%3E)
 
 <br />
 
