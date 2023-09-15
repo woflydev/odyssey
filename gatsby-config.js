@@ -4,13 +4,13 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Project Odyssey's Official Website`,
-    titleTemplate: `%s | Odyssey's Official Website`,
+    title: `17556 Odyssey's Official Website`,
+    titleTemplate: `%s | 17556 Odyssey's Official Website`,
     description: `Project Odyssey's Official Website.`,
     author: `woflydev@project_odyssey`,
-    url: "https://odyssey.diskreet.org",
+    url: "https://odyssey.woflydev.com",
     image: "/odyssey.jpg", // Path to your image you placed in the 'static' folder
-    twitterUsername: "@project_odyssey",
+    twitterUsername: "@pancakeVFX",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
