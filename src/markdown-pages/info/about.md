@@ -1,5 +1,6 @@
 ---
 slug: "/about"
+added: "2023-11-20"
 video: "false"
 listName: "👨‍💻 /About Us"
 title: "Who Are We?"
@@ -35,26 +36,36 @@ techIcons: [
       ]
 ---
 
-## Project Odyssey
-We are a passionate robotics team based in Brisbane, Australia 🇦🇺.<br>
-Dedicated individuals from a multicultural and diverse background.<br>
-Our team includes members from the Queensland Academies for Science, Mathematics, and Technology.<br>
+### Project Odyssey
+We are a passionate robotics team formed in 2022 based out of Brisbane (Toowong), Australia 🇦🇺.<br>
+Our team is made up of highschool students from the Queensland Academies for Science Mathematics and Technology.<br>
 All of our members are a tight-knit, well-rounded community, eager to learn and thrive!<br>
 
- <br>
+<br>
  
-## Hardware Sector
-Ermia - Electrical Engineer<br>
-Lokajith - Hardware Specialist<br>
-Banjo Douglas Dillon-Hines - Hardware Specialist<br>
-Daniel - Media Management and Public Relations<br>
+### Hardware Sector
+Lokajith - Hardware Lead and Designer<br>
+Ermia - CAD and Attachment Designer<br>
+Banjo - Hardware Specialist and Builder<br>
+Annanya - Hardware Specialist and Builder
 
- <br>
- 
-## Software Sector
-Enoch - Software Engineer<br>
-Ian - Software Engineer<br>
+<br>
 
- <br>
+### Software Sector
+Enoch - Systems Engineer and Software Lead<br>
+Ian - Computer Vision Engineer<br>
+
+<br>
+
+### Outreach Sector
+Aaron - Outreach and Acquisition Lead<br>
+Siddharth - Outreach Organizer and Speaker<br>
+
+<br>
+
+### Other
+Mr. Kelvin - Emotional Support and Very Wise Man
+
+<br>
 
 These are the different services, frameworks, and tools we use! ↓↓↓
